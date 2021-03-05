@@ -12,7 +12,7 @@ pipeline {
         // Where your Nexus is running
         NEXUS_URL = "ec2-15-206-127-151.ap-south-1.compute.amazonaws.com:8081"
         // Repository where we will upload the artifact
-        NEXUS_REPOSITORY = “build”
+        NEXUS_REPOSITORY = "build"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "nexus_credentials"
     }
@@ -70,12 +70,11 @@ pipeline {
                                 file: "pom.xml",
                                 type: "pom"]
                             ]
-                        );
+                        )
                     } else {
                         error "*** File: ${artifactPath}, could not be found";
                     }
                 }
             }
-}
         }
-},
+
